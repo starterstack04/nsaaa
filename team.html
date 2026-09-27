@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>
+        EHR HMS | Student
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="style.css">
+
+</head>
+
+
+<body class="dashboard-page">
+
+    <button
+        class="sidebar-toggle"
+        id="sidebarToggle"
+        type="button"
+        aria-label="Open dashboard menu"
+        aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <aside class="dashboard-sidebar" id="dashboardSidebar">
+        <div class="dashboard-brand">
+            <span class="brand-mark">E</span>
+            <span>EHR <small>HMS</small></span>
+        </div>
+
+        <nav class="dashboard-menu" aria-label="Student dashboard menu">
+            <button class="dashboard-menu-item active" type="button" data-view="dashboardView">
+                <span>⌂</span> Dashboard
+            </button>
+            <button class="dashboard-menu-item" type="button" data-view="demographicsView">
+                <span>◎</span> Patient Demographics
+            </button>
+            <button class="dashboard-menu-item" type="button" data-view="historyView">
+                <span>＋</span> Medical History
+            </button>
+            <button class="dashboard-menu-item" type="button" data-view="documentationView">
+                <span>▤</span> Documentation
+            </button>
+        </nav>
+
+        <button id="logoutPatient" class="dashboard-logout" type="button">Logout</button>
+    </aside>
+
+    <main class="dashboard-main">
+        <header class="dashboard-topbar">
+            <div>
+                <span class="section-label">STUDENT HEALTH RECORD</span>
+                <h1 id="dashboardTitle">Dashboard</h1>
+            </div>
+            <span class="dashboard-user" id="patientName">Student</span>
+        </header>
+
+        <section class="dashboard-view active" id="dashboardView">
+            <div class="welcome-panel">
+                <div>
+                    <span class="section-label">EHR HMS</span>
+                    <h2>Welcome, <span id="dashboardName">Student</span></h2>
+                    <p>View and manage your personal health information in one secure place.</p>
+                </div>
+            </div>
+
+            <section class="team-scenarios-panel">
+                <div class="view-heading">
+                    <span class="section-label">TEAM UPDATES</span>
+                    <h2>Scenarios</h2>
+                    <p>Scenarios posted by the administrator for your team.</p>
+                </div>
+                <div id="teamScenarios" class="scenario-list"></div>
+            </section>
+
+        </section>
+
+        <section class="dashboard-view" id="demographicsView">
+            <div class="view-heading">
+                <span class="section-label">PERSONAL INFORMATION</span>
+                <h2>Patient Demographics</h2>
+                <p>Keep your personal and emergency contact information updated.</p>
+            </div>
+            <form class="record-form" data-record="demographics">
+                <div class="form-section-block">
+                    <h3>Basic Information</h3>
+                    <div class="record-grid">
+                        <label>Full Name<input type="text" id="demographicFullName"></label>
+                        <label>Date of Birth<input type="date"></label>
+                        <label>Age<input type="number" min="0"></label>
+                        <label>Gender<select><option value="">Select gender</option><option>Female</option><option>Male</option><option>Other</option></select></label>
+                        <label>Region<input type="text"></label>
+                        <label>Address<input type="text"></label>
+                        <label>City<input type="text"></label>
+                        <label>State/Province<input type="text"></label>
+                        <label>Phone<input type="tel"></label>
+                        <label>ZIP Code<input type="text"></label>
+                    </div>
+                </div>
+                <div class="form-section-block">
+                    <h3>Emergency Contact</h3>
+                    <div class="record-grid">
+                        <label>Emergency Contact Name<input type="text"></label>
+                        <label>Relationship<input type="text"></label>
+                        <label>Phone<input type="tel"></label>
+                    </div>
+                </div>
+                <button class="btn btn-primary" type="button" data-save-message="Demographic information saved.">Save Demographics</button>
+            </form>
+        </section>
+
+        <section class="dashboard-view" id="historyView">
+            <div class="view-heading">
+                <span class="section-label">HEALTH INFORMATION</span>
+                <h2>Medical History</h2>
+                <p>Record important information about your health history.</p>
+            </div>
+            <form class="record-form" data-record="medicalHistory">
+                <label>Diagnosis of the Patient<textarea rows="4"></textarea></label>
+                <label>Allergies<textarea rows="4"></textarea></label>
+                <label>Current Medication<textarea rows="4"></textarea></label>
+                <label>History<textarea rows="6"></textarea></label>
+                <button class="btn btn-primary" type="button" data-save-message="Medical history saved.">Save Medical History</button>
+            </form>
+        </section>
+
+        <section class="dashboard-view" id="documentationView">
+            <div class="view-heading">
+                <span class="section-label">CLINICAL NOTES</span>
+                <h2>Documentation</h2>
+                <p>Document the patient's visit, care, and treatment plan.</p>
+            </div>
+            <form class="record-form" data-record="documentation">
+                <label>Date<input type="date"></label>
+                <label>Chief Complaint<textarea rows="3"></textarea></label>
+                <div class="form-section-block">
+                    <h3>Nursing Note</h3>
+                    <div class="record-grid">
+                        <label>Assessment<textarea rows="4"></textarea></label>
+                        <label>Intervention<textarea rows="4"></textarea></label>
+                        <label>Laboratory Test Performed<textarea rows="4"></textarea></label>
+                        <label>Nursing Diagnosis<textarea rows="4"></textarea></label>
+                        <label>Medications<textarea rows="4"></textarea></label>
+                        <label>Treatment Plan<textarea rows="4"></textarea></label>
+                    </div>
+                </div>
+                <button class="btn btn-primary" type="button" data-save-message="Documentation saved.">Save Documentation</button>
+            </form>
+        </section>
+    </main>
+
+
+    <div id="toast" class="toast"></div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

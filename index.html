@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EHR | Login</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+
+        <div class="nav-container">
+
+            <a href="index.html" class="logo">
+                <img
+                    src="asset/chs.png"
+                    alt="EHR CHS Logo">
+
+                <span>
+                    EHR
+                    <small>CHS</small>
+                </span>
+            </a>
+
+            <nav class="main-nav">
+                <a href="#login">Login</a>
+                <a href="#about">About Us</a>
+                <a href="#contact">Contact</a>
+            </nav><!DOCTYPE html>
+            <html lang="en">
+            <head>
+                <meta charset="UTF-8">
+                <title>Page title</title>
+            </head>
+            <body>
+                
+            </body>
+            </html>
+
+        </div>
+
+    </header>
+
+
+    <!-- LOGIN -->
+    <main>
+
+        <section class="login-section" id="login">
+
+            <div class="login-container">
+
+                <!-- SIGN IN -->
+                <div class="login-card">
+
+                    <h2>Sign In</h2>
+
+                    <p class="login-subtitle">
+                        Select your account type
+                    </p>
+
+
+                    <!-- ROLE -->
+                    <div class="role-selection">
+
+                        <div
+                            class="role-card active"
+                            data-role="student">
+
+                            <div class="role-icon">
+                                T
+                            </div>
+
+                            <h3>TEAM</h3>
+
+                            <p>
+                                Team Account
+                            </p>
+
+                        </div>
+
+
+                        <div
+                            class="role-card"
+                            data-role="admin">
+
+                            <div class="role-icon">
+                                A
+                            </div>
+
+                            <h3>Admin</h3>
+
+                            <p>
+                                Administrator
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- LOGIN FORM -->
+                    <form id="loginForm">
+
+                        <input
+                            type="hidden"
+                            id="selectedRole"
+                            value="student">
+
+
+                        <div class="form-group">
+
+                            <label for="loginEmail">
+                                Email Address
+                            </label>
+
+                            <input
+                                type="email"
+                                id="loginEmail"
+                                placeholder="Enter your email"
+                                required>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="loginPassword">
+                                Password
+                            </label>
+
+                            <input
+                                type="password"
+                                id="loginPassword"
+                                placeholder="Enter your password"
+                                required>
+
+                        </div>
+
+
+                        <div
+                            id="adminHint"
+                            class="admin-hint"
+                            style="display:none;">
+
+                            Admin account only:
+                            <strong>
+                                
+                            </strong>
+
+                        </div>
+
+
+                        <button
+                            type="submit"
+                            class="btn btn-primary full-width">
+
+                            Login
+
+                        </button>
+
+                    </form>
+
+
+                    <!-- REGISTER -->
+                    <div class="register-link">
+
+                        <p>
+                            Use the account provided to each team.
+
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- WELCOME CONTENT -->
+                <div class="login-info">
+
+                    <img
+                        src="asset/chs.png"
+                        alt="EHR CHS"
+                        class="login-image">
+
+                    <span class="section-label">
+                        COLLEGE OF HEALTH SCIENCES 2026
+                    </span>
+
+                    <h1>
+                        Welcome to
+                        <span>EHR NEXUS</span>
+                    </h1>
+
+                    <p>
+                       At the end of the activity, participants will be able to:
+
+Demonstrate basic skills in using an Electronic Health Record.
+Accurately document and retrieve patient information.
+Apply nursing informatics concepts in a simulated clinical setting.
+Identify relevant patient data and abnormal findings.
+Promote patient safety through accurate electronic documentation.
+Demonstrate awareness of privacy, confidentiality, and data security.
+Develop teamwork, critical thinking, and decision-making skills.
+                    </p>
+
+                    <div class="login-features">
+
+                      
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ABOUT -->
+        <section class="section" id="about">
+
+            <div class="section-container">
+
+                <div class="section-image">
+
+                    <img
+                        src="asset/chs.png"
+                        alt="About EHR CHS">
+
+                </div>
+
+
+                <div class="section-content">
+
+                    <span class="section-label">
+                        ABOUT US
+                    </span>
+
+                    <h2>
+                        
+                    </h2>
+
+                    <p>
+                       Participants will act as student nurses using a simulated Electronic Health Record (EHR) to assess, document, retrieve, and interpret patient information. They must complete assigned EHR tasks accurately while demonstrating proper documentation, data privacy, patient safety, and effective use of health information technology.
+                    </p>
+
+                    <p>
+                        Each team can sign in using their assigned account.
+                        
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CONTACT -->
+        <section
+            class="section contact-section"
+            id="contact">
+
+            <div class="section-container">
+
+                <div class="section-content">
+
+                    <span class="section-label">
+                        CONTACT US
+                    </span>
+
+                    <h2>
+                        We're Here to Help
+                    </h2>
+
+                    <p>
+                        If you have questions or concerns,
+                        feel free to contact the EHR team.
+                    </p>
+
+                    <div class="contact-details">
+
+                        <p> Nursing Student Association of ICCT Colleges
+</p>
+                        <p> 0999 455 3581</p>
+                        <p> https://www.facebook.com/share/1J53HQLAUh/</p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="contact-form-container">
+
+                    <form id="contactForm">
+
+                        <div class="form-group">
+
+                            <label for="contactName">
+                                Your Name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="contactName"
+                                required>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="contactEmail">
+                                Email
+                            </label>
+
+                            <input
+                                type="email"
+                                id="contactEmail"
+                                required>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="contactMessage">
+                                Message
+                            </label>
+
+                            <textarea
+                                id="contactMessage"
+                                rows="5"
+                                required></textarea>
+
+                        </div>
+
+
+                        <button
+                            type="submit"
+                            class="btn btn-primary">
+
+                            Send Message
+
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- REGISTER MODAL -->
+    <div
+        class="modal"
+        id="registerModal">
+
+        <div class="modal-content">
+
+            <button
+                type="button"
+                class="modal-close"
+                id="closeRegister">
+
+                &times;
+
+            </button>
+
+
+            <h2>
+                Create Student Account
+            </h2>
+
+            <p>
+                Student accounts are assigned by the administrator.
+            </p>
+
+
+            <form id="registerForm">
+
+                <div class="form-group">
+
+                    <label for="regName">
+                        Full Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="regName"
+                        placeholder="Juan Dela Cruz"
+                        required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="regEmail">
+                        Email Address
+                    </label>
+
+                    <input
+                        type="email"
+                        id="regEmail"
+                        placeholder="juan@email.com"
+                        required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="regPassword">
+                        Password
+                    </label>
+
+                    <input
+                        type="password"
+                        id="regPassword"
+                        placeholder="Create password"
+                        required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="regConfirm">
+                        Confirm Password
+                    </label>
+
+                    <input
+                        type="password"
+                        id="regConfirm"
+                        placeholder="Confirm password"
+                        required>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="btn btn-primary full-width">
+
+                    Create Account
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- TOAST -->
+    <div id="toast" class="toast"></div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

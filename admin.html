@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>
+        EHR HMS | Admin Dashboard
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="style.css">
+
+</head>
+
+
+<body>
+
+    <!-- ADMIN NAVBAR -->
+    <header class="navbar">
+
+        <div class="nav-container">
+
+            <a
+                href="admin.html"
+                class="logo">
+
+                <img
+                    src="asset/chs.png"
+                    alt="EHR CHS Logo">
+
+                <span>
+                    EHR
+                    <small>HMS</small>
+                </span>
+
+            </a>
+
+
+            <nav class="main-nav">
+
+                <a href="admin.html">
+                    Dashboard
+                </a>
+
+                <button
+                    id="adminLogout"
+                    class="logout-btn">
+
+                    Logout
+
+                </button>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <main class="admin-main">
+        <div class="admin-container">
+            <div class="admin-header">
+                <div>
+                    <span class="section-label">ADMINISTRATION</span>
+                    <h1>Team Health Records</h1>
+                    <p>Review the information submitted by every team.</p>
+                </div>
+            </div>
+
+            <div id="teamRecords" class="team-records"></div>
+
+            <section class="scenario-composer">
+                <div class="view-heading">
+                    <span class="section-label">TEAM UPDATE</span>
+                    <h2>Post a Scenario</h2>
+                    <p>Send a scenario or instruction to one selected team.</p>
+                </div>
+
+                <form id="scenarioForm" class="record-form">
+                    <label>
+                        Scenario
+                        <textarea id="scenarioText" rows="5" placeholder="Write a scenario for the selected team..." required></textarea>
+                    </label>
+
+                    <label>
+                        Pick Team
+                        <select id="scenarioTeam" required></select>
+                    </label>
+
+                    <input type="hidden" id="editingScenarioId" value="">
+
+                    <div class="scenario-form-actions">
+                        <button class="btn btn-primary" id="scenarioSubmit" type="submit">Post Scenario</button>
+                        <button class="btn btn-secondary" id="cancelScenarioEdit" type="button" hidden>Cancel Edit</button>
+                    </div>
+                </form>
+            </section>
+
+            <section class="previous-scenarios-section">
+                <div class="view-heading">
+                    <span class="section-label">SCENARIO HISTORY</span>
+                    <h2>Previous Scenarios</h2>
+                    <p>Review and delete scenarios previously posted to teams.</p>
+                </div>
+
+                <div id="previousScenarios" class="scenario-list"></div>
+            </section>
+        </div>
+    </main>
+
+
+    <div id="toast" class="toast"></div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
